@@ -1,0 +1,152 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css");
+
+hr.rounded {
+  border-top: 3px solid;
+  border-radius: 5px;
+}
+
+/*  
+Thanks to: Usama Tahir
+https://medium.com/@AmJustSam
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100vw;
+  height: 100vh;
+}
+
+
+
+.content {
+  /* this is needed or the background will be offset by a few pixels at the top */
+  position: relative;
+  overflow-x: hidden;
+}
+
+.content::before {
+  content: "";
+  position: fixed;
+
+  background-image: url('https://images.unsplash.com/photo-1642623883157-cd5b06ae6c45?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1550&q=80');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+
+  filter: blur(3px);
+}
+
+.login {
+  /* this is needed or the background will be offset by a few pixels at the top */
+  position: relative;
+  overflow-x: hidden;
+}
+
+.login::before {
+  content: "";
+  position: fixed;
+
+  background-image: url('https://images.unsplash.com/photo-1521080755838-d2311117f767?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1562&q=80');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+
+  filter: blur(7px);
+}
+
+@keyframes slidedown {
+  from {
+    margin-top: 100%;
+  }
+
+  to {
+    margin-top: 0%;
+  }
+}
+
+.slide {
+  animation-name: slidedown;
+  animation-duration: 1s;
+}
+
+thead {
+  background-color: rgb(0, 158, 224);
+
+}
+
+.bt {
+  border: 1px solid;
+  padding: 1%
+}
+
+.moduleAccueil {
+  color: white;
+  background-color: #21252A;
+  border-radius: 25px;
+
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.moduleAccueil:hover {
+  animation-name: hoverBlackWhite;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.moduleAccueilDisabled {
+  color: rgb(255, 255, 255);
+  background-color: gray;
+  border-radius: 25px;
+}
+
+@keyframes hoverBlackWhite {
+  from {
+    background-color: black;
+  }
+
+  to {
+    background-color: white;
+    color: black;
+  }
+}
+
+.moduleOffcanvas {
+  color: black;
+  background-color: white;
+  border-radius: 25px;
+  border: 1px solid;
+  border-color: #21252A;
+}
+
+.moduleOffcanvas:hover {
+  animation-name: hoverWhiteBlack;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes hoverWhiteBlack {
+  from {
+    background-color: white;
+  }
+
+  to {
+    background-color: #21252A;
+    color: white;
+  }
+}
+
+.imgblur {
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+}
+
+.dashboard {
+  backdrop-filter: blur(5px);
+}
