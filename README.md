@@ -12,4 +12,5 @@ Nous avons donc mis en place une base de donnée avec une table utilisateur, une
 
 ## Difficultés
 
-Nous avons rencontrer des difficultés pour la mise en place du formulaire, notamment pour la vérification des informations de l'utilisateur.
+Nous avons rencontrer des difficultés pour la mise en place du formulaire, notamment pour la vérification des informations de l'utilisateur. Le formulaire ne fonctionne pas a cause de la redirection qui n'es pas effectué. Le problème était de mettre un redirect a la fin de notre traitement de la requete du formluaire pour que si l'utilisateur est bien log il soit redirect justement sur la page d'accueil. Ayant commencé le projet avant le module de redirect fait en cours, le module de redirect de Symfony a été importé avec packagist et en essayant de mettre la fonction redirectToRoute celle la n'était pas reconnu. Je l'ai alors ajouté a mon abstract controller ainsi que tout les éléments associé que je pensais nécessaires mais cela n'a pas solutionner le problème. De plus le système de reponse symfony ne fonctionne pas étant donné que notre fonction ne renvoie rien suite a l'erreur de redirection. 
+
